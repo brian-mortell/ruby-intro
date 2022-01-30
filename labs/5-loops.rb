@@ -8,3 +8,34 @@
 # screen.
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+
+# puts "#{ranks[0]} of #{suits[0]}"
+
+for rank in ranks
+for suit in suits
+    puts "#{rank} of #{suit}"
+end
+end
+
+# Not as simple, but assigns the deck to a variable so we can use it for other things. This is from lab solution
+
+# Build an empty array
+deck = []
+
+for rank in ranks
+  for suit in suits
+    # adds each card to the array
+    card = "#{rank} of #{suit}"
+    deck.push(card)
+  end
+end
+
+# Now that we have a data structure that represents the "deck";
+# We can "shuffle" the deck
+shuffled_deck = deck.shuffle
+
+# Take one off the top
+puts shuffled_deck[0]
+
+# Or pull out a random card
+puts deck.sample
